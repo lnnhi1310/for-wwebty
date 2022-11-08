@@ -76,16 +76,21 @@
     
 
   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
     document.getElementById("hinh").onmouseover = function() {mouseOver()};
     document.getElementById("hinh").onmouseout = function() {mouseOut()};
-
     function mouseOver() {
     document.getElementById("hinh").style.opacity = 100;
     }
-
     function mouseOut() {
     document.getElementById("hinh").style.opacity = 0;
     }
+
+    addEventListener('touchstart', (e)=>{
+      
+    })
+    })
   /*
 
  * Settings
