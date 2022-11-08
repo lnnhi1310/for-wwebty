@@ -28,7 +28,6 @@
             .center 
             {
                 z-index: 1000;
-                visibility: hidden;
             }
 
             img
@@ -38,6 +37,7 @@
                 left: 5vw;
                 height: auto;
                 position: absolute;
+                opacity: 0;
             }
 
             div
@@ -49,7 +49,7 @@
             {
                 color: white;
                 text-align: center;
-                font-size: 50px;
+                font-size: 30px;
             }
             
             @media only screen and (max-width: 600px) {
@@ -72,32 +72,27 @@
     </div>
     <canvas id="pinkboard"></canvas>
     <div style="margin-top: 70px;">
-    <h1>Hãy chạm vào trái tim để thấy sự kì diệu :D</h1>
+    <h1>Hãy chạm vào trái tym để thấy sự kì diệu :D</h1>
     </div>
     
 
   <script>
     document.getElementById("hinh").onmouseover = function() {mouseOver()};
     document.getElementById("hinh").onmouseout = function() {mouseOut()};
+    document.getElementById("hinh").ontouchstart = function() {mouseOver()};
+    document.getElementById("hinh").ontouchend = function() {mouseOut()};
 
     function mouseOver() {
-    document.getElementById("hinh").style.visibility = "visible";
+    document.getElementById("hinh").style.opacity = 100;
     }
 
     function mouseOut() {
-    document.getElementById("hinh").style.visibility = "hidden";
+    document.getElementById("hinh").style.opacity = 0;
     }
 
     function myFunction()
     {
-      if (hinh === "hidden")
-      {
-        document.getElementById("hinh").style.visibility = "visible";
-      }
-      else
-      {
-        document.getElementById("hinh").style.visibility = "hidden";
-      }
+
     }
   /*
 
