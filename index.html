@@ -48,22 +48,30 @@
             {
                 color: white;
                 text-align: center;
+                font-size: 50px;
             }
             
+            @media only screen and (max-width: 600px) {
+              img
+              {
+                left: 10vh;
+              }
+            }
+
         </style>
     </head>
 
  <BODY>
     <div class="container">
         <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4"><img id="hinh" class="center" src="hehe.png"></div>
-            <div class="col-4"></div>
+            <div class="col-sm-12 col-md-4"></div>
+            <div class="col-sm-12 col-md-4"><img id="hinh" class="center" src="hehe.png"></div>
+            <div class="col-sm-12 col-md-4"></div>
         </div>
     </div>
     <canvas id="pinkboard"></canvas>
     <div style="margin-top: 70px;">
-    <h1>Hãy nhấp vào trái tim để thấy sự kì diệu :D</h1>
+    <h1>Hãy chạm vào trái tim để thấy sự kì diệu :D</h1>
     </div>
     
 
