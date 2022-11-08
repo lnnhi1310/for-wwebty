@@ -28,6 +28,7 @@
             .center 
             {
                 z-index: 1000;
+                visibility: hidden;
             }
 
             img
@@ -65,7 +66,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-4"></div>
-            <div class="col-sm-12 col-md-4"><img id="hinh" class="center" src="hehe.png"></div>
+            <div class="col-sm-12 col-md-4"><img id="hinh" class="center" src="hehe.png" ontouchstart="myFunction()"></div>
             <div class="col-sm-12 col-md-4"></div>
         </div>
     </div>
@@ -76,21 +77,28 @@
     
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-
     document.getElementById("hinh").onmouseover = function() {mouseOver()};
     document.getElementById("hinh").onmouseout = function() {mouseOut()};
+
     function mouseOver() {
-    document.getElementById("hinh").style.opacity = 100;
-    }
-    function mouseOut() {
-    document.getElementById("hinh").style.opacity = 0;
+    document.getElementById("hinh").style.visibility = "visible";
     }
 
-    addEventListener('touchstart', (e)=>{
-      
-    })
-    })
+    function mouseOut() {
+    document.getElementById("hinh").style.visibility = "hidden";
+    }
+
+    function myFunction()
+    {
+      if (hinh === "hidden")
+      {
+        document.getElementById("hinh").style.visibility = "visible";
+      }
+      else
+      {
+        document.getElementById("hinh").style.visibility = "hidden";
+      }
+    }
   /*
 
  * Settings
